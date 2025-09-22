@@ -1,4 +1,4 @@
-package com.huaju;
+package com.huaju.hong;
 
 import net.fabricmc.api.ClientModInitializer;
 

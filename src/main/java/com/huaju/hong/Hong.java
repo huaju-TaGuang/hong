@@ -1,11 +1,9 @@
 package com.huaju.hong;
 
-import com.huaju.hong.item.HongIngot;
 import com.huaju.hong.service.InitService;
 import com.huaju.hong.service.impl.InitServiceImpl;
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +23,8 @@ public class Hong implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		initService.InitHong();
+		initService.initHong();
+		initService.initHongGroup();
 
 		LOGGER.info("========== 虹 加载成功 ==========");
 	}
