@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "hong",
+	"version": "${version}",
+	"name": "Hong",
+	"description": "虹-huaju目的为创建提高游戏战斗趣味的第一个mod-期望为新增护甲、武器、效果道具",
+	"authors": [
+		"huaju"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hong/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.huaju.hong.Hong"
+		],
+		"client": [
+			"com.huaju.hong.HongClient"
+		],
+		"fabric-datagen": [
+			"com.huaju.hong.HongDataGenerator"
+		]
+	},
+	"mixins": [
+		"hong.mixins.json",
+		{
+			"config": "hong.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

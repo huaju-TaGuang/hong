@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "hong:iron"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "hong:iron"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "hong:iron"
+      }
+    ]
+  }
+}

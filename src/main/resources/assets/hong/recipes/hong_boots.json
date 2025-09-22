@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "hong:hong_ingot"
+    }
+  },
+  "result": {
+    "item": "hong:hong_boots",
+    "count": 1
+  }
+}
