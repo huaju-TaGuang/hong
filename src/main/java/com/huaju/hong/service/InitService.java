@@ -15,4 +15,9 @@ public interface InitService {
      */
     void initHongGroup();
 
+    /**
+     * mod基本魔咒统一注册
+     */
+    void effectRegister();
+
 }

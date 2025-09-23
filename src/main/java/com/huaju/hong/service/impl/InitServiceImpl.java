@@ -1,5 +1,6 @@
 package com.huaju.hong.service.impl;
 
+import com.huaju.hong.common.HongEnchantmentEffects;
 import com.huaju.hong.group.HongGroup;
 import com.huaju.hong.item.HongArmor;
 import com.huaju.hong.item.HongIngot;
@@ -32,6 +33,11 @@ public class InitServiceImpl implements InitService {
         HongGroup.registerAdd(HongArmor.HONG_CHESTPLATE);
         HongGroup.registerAdd(HongArmor.HONG_LEGGINGS);
         HongGroup.registerAdd(HongArmor.HONG_BOOTS);
+    }
+
+    @Override
+    public void effectRegister() {
+        HongEnchantmentEffects.initialize();
     }
 
 }

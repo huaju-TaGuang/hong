@@ -25,7 +25,9 @@ public class Hong implements ModInitializer {
 
 		initService.initHong();
 		initService.initHongGroup();
+		initService.effectRegister();
 
 		LOGGER.info("========== 虹 加载成功 ==========");
 	}
+
 }
