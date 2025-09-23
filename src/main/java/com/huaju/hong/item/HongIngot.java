@@ -1,12 +1,11 @@
 package com.huaju.hong.item;
 
 import com.huaju.hong.Hong;
+import com.huaju.hong.common.HongItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentAsset;
 import net.minecraft.item.equipment.EquipmentAssetKeys;
@@ -26,14 +25,12 @@ import java.util.Map;
  *
  * @author huaju
  */
-public class HongIngot extends Item {
-
-    public HongIngot(Settings settings) { super(settings); }
+public class HongIngot {
 
     /**
      * 注册该物品
      */
-    public static final Item HONG_INGOT = Items.register("hong_ingot");
+    public static final Item HONG_INGOT = HongItems.register("hong_ingot");
 
     /**
      * 基础耐久度
@@ -78,7 +75,6 @@ public class HongIngot extends Item {
      */
     public static void initialize(){
         FuelRegistryEvents.BUILD.register((builder, context) -> { builder.add(HongIngot.HONG_INGOT, 60 * 60 * 20); });  // 作为燃料可燃烧一小时
-        RegisterToGroup(ItemGroups.INGREDIENTS, HongIngot.HONG_INGOT);
     }
 
     /**

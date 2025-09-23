@@ -1,10 +1,11 @@
 package com.huaju.hong.item;
 
+import com.huaju.hong.common.HongItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.Settings;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.RegistryKey;
 
@@ -14,30 +15,28 @@ import net.minecraft.registry.RegistryKey;
  *
  * @author huaju
  */
-public class HongArmor extends Item {
-
-    public HongArmor(Settings settings) { super(settings); }
+public class HongArmor {
 
     // 注册盔甲
-    public static final Item HONG_HELMET = Items.register(
+    public static final Item HONG_HELMET = HongItems.register(
             "hong_helmet",
             new Settings()
                     .armor(HongIngot.INSTANCE, EquipmentType.HELMET)
                     .maxDamage(EquipmentType.HELMET.getMaxDamage(HongIngot.BASE_DURABILITY))
     );   // 虹-头盔
-    public static final Item HONG_CHESTPLATE = Items.register(
+    public static final Item HONG_CHESTPLATE = HongItems.register(
             "hong_chestplate",
             new Settings()
                     .armor(HongIngot.INSTANCE, EquipmentType.CHESTPLATE)
                     .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(HongIngot.BASE_DURABILITY))
     );   // 虹-护甲
-    public static final Item HONG_LEGGINGS = Items.register(
+    public static final Item HONG_LEGGINGS = HongItems.register(
             "hong_leggings",
             new Settings()
                     .armor(HongIngot.INSTANCE, EquipmentType.LEGGINGS)
                     .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(HongIngot.BASE_DURABILITY))
     );   // 虹-护腿
-    public static final Item HONG_BOOTS = Items.register(
+    public static final Item HONG_BOOTS = HongItems.register(
             "hong_boots",
             new Settings()
                     .armor(HongIngot.INSTANCE, EquipmentType.BOOTS)
@@ -48,11 +47,6 @@ public class HongArmor extends Item {
      * 初始化虹基础盔甲
      */
     public static void initialize(){
-        // 注册进装备组
-        RegisterToGroup(ItemGroups.INGREDIENTS, HONG_HELMET);
-        RegisterToGroup(ItemGroups.INGREDIENTS, HONG_CHESTPLATE);
-        RegisterToGroup(ItemGroups.INGREDIENTS, HONG_LEGGINGS);
-        RegisterToGroup(ItemGroups.INGREDIENTS, HONG_BOOTS);
     }
 
     /**
